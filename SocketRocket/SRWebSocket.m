@@ -23,7 +23,7 @@
 
 #import "SRDelegateController.h"
 #import "SRIOConsumer.h"
-#import "SRIOConsumerPool.h"
+#import "SSRIOConsumerPool.h"
 #import "SRHash.h"
 #import "SRURLUtilities.h"
 #import "SRError.h"
@@ -134,7 +134,7 @@ NSString *const SSRHTTPResponseErrorKey = @"HTTPResponseStatusCode";
     __strong SRWebSocket *_selfRetain;
 
     NSArray<NSString *> *_requestedProtocols;
-    SRIOConsumerPool *_consumerPool;
+    SSRIOConsumerPool *_consumerPool;
 
     // proxy support
     SRProxyConnect *_proxyConnect;
@@ -176,7 +176,7 @@ NSString *const SSRHTTPResponseErrorKey = @"HTTPResponseStatusCode";
 
     _consumers = [[NSMutableArray alloc] init];
 
-    _consumerPool = [[SRIOConsumerPool alloc] init];
+    _consumerPool = [[SSRIOConsumerPool alloc] init];
 
     _scheduledRunloops = [[NSMutableSet alloc] init];
 

@@ -9,9 +9,9 @@
 // of patent rights can be found in the PATENTS file in the same directory.
 //
 
-#import "SRIOConsumerPool.h"
+#import "SSRIOConsumerPool.h"
 
-@implementation SRIOConsumerPool {
+@implementation SSRIOConsumerPool {
     NSUInteger _poolSize;
     NSMutableArray<SRIOConsumer *> *_bufferedConsumers;
 }
