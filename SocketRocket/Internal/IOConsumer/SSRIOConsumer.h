@@ -18,7 +18,7 @@
 typedef size_t (^stream_scanner)(NSData *collected_data);
 typedef void (^data_callback)(SRWebSocket *webSocket,  NSData *data);
 
-@interface SRIOConsumer : NSObject {
+@interface SSRIOConsumer : NSObject {
     stream_scanner _scanner;
     data_callback _handler;
     size_t _bytesNeeded;

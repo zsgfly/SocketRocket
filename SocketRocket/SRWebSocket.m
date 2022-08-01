@@ -22,7 +22,7 @@
 #import <libkern/OSAtomic.h>
 
 #import "SRDelegateController.h"
-#import "SRIOConsumer.h"
+#import "SSRIOConsumer.h"
 #import "SSRIOConsumerPool.h"
 #import "SRHash.h"
 #import "SRURLUtilities.h"
@@ -88,7 +88,7 @@ NSString *const SSRHTTPResponseErrorKey = @"HTTPResponseStatusCode";
     OSSpinLock _propertyLock;
 
     dispatch_queue_t _workQueue;
-    NSMutableArray<SRIOConsumer *> *_consumers;
+    NSMutableArray<SSRIOConsumer *> *_consumers;
 
     NSInputStream *_inputStream;
     NSOutputStream *_outputStream;
@@ -1218,7 +1218,7 @@ static const char CRLFCRLFBytes[] = {'\r', '\n', '\r', '\n'};
         return didWork;
     }
 
-    SRIOConsumer *consumer = [_consumers objectAtIndex:0];
+    SSRIOConsumer *consumer = [_consumers objectAtIndex:0];
 
     size_t bytesNeeded = consumer.bytesNeeded;
 

@@ -11,18 +11,18 @@
 
 #import <Foundation/Foundation.h>
 
-#import "SRIOConsumer.h" // TODO: (nlutsenko) Convert to @class and constants file for block types
+#import "SSRIOConsumer.h" // TODO: (nlutsenko) Convert to @class and constants file for block types
 
 // This class is not thread-safe, and is expected to always be run on the same queue.
 @interface SSRIOConsumerPool : NSObject
 
 - (instancetype)initWithBufferCapacity:(NSUInteger)poolSize;
 
-- (SRIOConsumer *)consumerWithScanner:(stream_scanner)scanner
+- (SSRIOConsumer *)consumerWithScanner:(stream_scanner)scanner
                               handler:(data_callback)handler
                           bytesNeeded:(size_t)bytesNeeded
                    readToCurrentFrame:(BOOL)readToCurrentFrame
                           unmaskBytes:(BOOL)unmaskBytes;
-- (void)returnConsumer:(SRIOConsumer *)consumer;
+- (void)returnConsumer:(SSRIOConsumer *)consumer;
 
 @end
