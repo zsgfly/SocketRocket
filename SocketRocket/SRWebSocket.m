@@ -67,7 +67,7 @@ static inline int32_t validate_dispatch_data_partial_string(NSData *data);
 static uint8_t const SRWebSocketProtocolVersion = 13;
 
 NSString *const SRWebSocketErrorDomain = @"SRWebSocketErrorDomain";
-NSString *const SRHTTPResponseErrorKey = @"HTTPResponseStatusCode";
+NSString *const SSRHTTPResponseErrorKey = @"HTTPResponseStatusCode";
 
 @interface SRWebSocket ()  <NSStreamDelegate>
 

@@ -55,7 +55,7 @@ extern NSString *const SRWebSocketErrorDomain;
 /**
  Key used for HTTP status code if bad response was received from the server.
  */
-extern NSString *const SRHTTPResponseErrorKey;
+extern NSString *const SSRHTTPResponseErrorKey;
 
 @protocol SRWebSocketDelegate;
 

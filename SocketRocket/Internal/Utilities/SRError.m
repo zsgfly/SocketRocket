@@ -36,7 +36,7 @@ NSError *SRHTTPErrorWithCodeDescription(NSInteger httpCode, NSInteger errorCode,
     return [NSError errorWithDomain:SRWebSocketErrorDomain
                                code:errorCode
                            userInfo:@{ NSLocalizedDescriptionKey: description,
-                                       SRHTTPResponseErrorKey: @(httpCode) }];
+                                       SSRHTTPResponseErrorKey: @(httpCode) }];
 }
 
 NS_ASSUME_NONNULL_END
